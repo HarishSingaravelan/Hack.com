@@ -83,5 +83,6 @@ temp/
 .env
 .flaskenv
 
-# Ignore any responses
-responses/*
+# Ignore pdfs folder
+data/
+responses/
