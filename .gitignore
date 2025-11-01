@@ -1,0 +1,84 @@
+# Ignore file for Python, FastAPI, and Uvicorn projects
+
+# Python Environment and Dependencies
+
+# Byte-compiled / optimized / DLL files
+
+**pycache**/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+
+.Python
+build/
+develop-eggs/
+dist/
+eggs/
+.egg-info/
+*.egg
+sdist/
+wheels/
+
+# Virtual environments
+
+# Ignore the environment folder created by venv/conda/poetry, etc.
+
+venv/
+.venv/
+env/
+/Envs/
+/bin/
+/include/
+/lib/
+/lib64/
+
+# Jupyter Notebook / IPython / Pytest
+
+.ipynb_checkpoints
+.pytest_cache
+htmlcov/
+.coverage
+
+# Python build and dependency manager caches (e.g., pip)
+
+.pip-modules
+.mypy_cache/
+.pytype/
+.pylint.d/
+
+# Poetry-specific files
+
+poetry.lock  # Only if you explicitly manage dependencies manually
+.cache/
+.pytest_cache/
+
+# IDE and OS Files
+
+# Visual Studio Code
+
+.vscode/
+
+# PyCharm/IntelliJ
+
+.idea/
+
+# Operating System Files
+
+.DS_Store
+Thumbs.db
+
+# LOGS AND TEMP DATA
+
+*.log
+tmp/
+temp/
+*.sqlite
+*.db
+
+# SECURITY & SECRETS (CRITICAL)
+
+# Ignore environment variables file (where API keys are stored)
+
+.env
+.flaskenv
