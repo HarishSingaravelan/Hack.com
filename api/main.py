@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 # IMPORTANT: This import connects the FastAPI app to the core
 # LangChain logic, including the LLM and the memory store.
-from src.LangChainLogic import chain_with_history 
+from src.LangChainWithChroma import chain_with_history 
 
 # --- FastAPI Application Setup ---
 
