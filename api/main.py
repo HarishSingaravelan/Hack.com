@@ -1,21 +1,16 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-# IMPORTANT: This import connects the FastAPI app to the core
-# LangChain logic, including the LLM and the memory store.
-from src.LangChainWithChroma import chain_with_history 
-from src.LangChainWithChroma import run_with_context 
+from src.LangChainWithChroma import chain_with_history, retriever
 
 # --- FastAPI Application Setup ---
 
 app = FastAPI(title="LangChain Gemini Conversational API")
 
-# Define the data structure for the incoming request (required by the endpoint)
 class QuestionRequest(BaseModel):
     """Input model requiring a session ID for history tracking and the user's question."""
     session_id: str 
     question: str
 
-# Define the data structure for the outgoing response
 class AnswerResponse(BaseModel):
     """Output model containing the AI's answer."""
     answer: str
@@ -23,13 +18,10 @@ class AnswerResponse(BaseModel):
 @app.post("/ask", response_model=AnswerResponse)
 async def ask_question_endpoint(request: QuestionRequest):
     """
-    Handles user chat requests. It retrieves or creates a session history 
-    based on the provided session_id and invokes the LangChain with context.
+    Handles user chat requests with automatic RAG context integration.
+    The chain_with_history now automatically retrieves relevant context
+    from ChromaDB and includes it in the LLM prompt.
     """
-    
-    # Invoke the imported chain_with_history (from llm_service.py).
-    # 1. The main input is the user's question dictionary: {"question": request.question}
-    # 2. The session context is passed in the 'config' dictionary under "configurable".
     response_text = await chain_with_history.ainvoke(
         {"question": request.question},
         config={"configurable": {"session_id": request.session_id}},
@@ -37,15 +29,36 @@ async def ask_question_endpoint(request: QuestionRequest):
     
     return AnswerResponse(answer=response_text)
 
-@app.post("/askwithcontext", response_model=AnswerResponse)
-async def ask_question_endpoint(request: QuestionRequest):
-    """
-    Handles user chat requests with RAG context integration.
-    """
-    # Use run_with_context which includes RAG retrieval
-    response_text = await run_with_context(
-        session_id=request.session_id,
-        question=request.question
-    )
+@app.get("/test-rag")
+async def test_rag():
+    """Debug endpoint to verify RAG is working"""
+    if retriever is None:
+        return {
+            "status": "❌ RAG not enabled",
+            "reason": "ChromaDB not found at src/chroma_db"
+        }
     
-    return AnswerResponse(answer=response_text)
+    test_query = "change of address"
+    docs = retriever.invoke(test_query)
+    
+    return {
+        "status": "✅ RAG enabled and working!",
+        "chroma_dir": "src/chroma_db",
+        "test_query": test_query,
+        "num_docs_retrieved": len(docs),
+        "sample_docs": [
+            {
+                "page": doc.metadata.get("page", "unknown"),
+                "preview": doc.page_content[:200] + "..."
+            }
+            for doc in docs[:3]
+        ] if docs else []
+    }
+
+@app.get("/health")
+async def health_check():
+    """Simple health check endpoint"""
+    return {
+        "status": "healthy",
+        "rag_enabled": retriever is not None
+    }
