@@ -32,7 +32,7 @@ llm = ChatGoogleGenerativeAI(
 )
 
 # --- Optional: Connect to ChromaDB ---
-CHROMA_DB_DIR = "chroma_db"
+CHROMA_DB_DIR = "src/chroma_db"
 
 rag_chain = None
 if os.path.exists(CHROMA_DB_DIR):

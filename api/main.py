@@ -3,6 +3,7 @@ from pydantic import BaseModel
 # IMPORTANT: This import connects the FastAPI app to the core
 # LangChain logic, including the LLM and the memory store.
 from src.LangChainWithChroma import chain_with_history 
+from src.LangChainWithChroma import run_with_context 
 
 # --- FastAPI Application Setup ---
 
@@ -32,6 +33,19 @@ async def ask_question_endpoint(request: QuestionRequest):
     response_text = await chain_with_history.ainvoke(
         {"question": request.question},
         config={"configurable": {"session_id": request.session_id}},
+    )
+    
+    return AnswerResponse(answer=response_text)
+
+@app.post("/askwithcontext", response_model=AnswerResponse)
+async def ask_question_endpoint(request: QuestionRequest):
+    """
+    Handles user chat requests with RAG context integration.
+    """
+    # Use run_with_context which includes RAG retrieval
+    response_text = await run_with_context(
+        session_id=request.session_id,
+        question=request.question
     )
     
     return AnswerResponse(answer=response_text)
