@@ -75,13 +75,14 @@ def get_context_for_question(inputs: dict) -> str:
 
 # --- Enhanced Prompt with RAG Context ---
 prompt = ChatPromptTemplate.from_messages([
-    ("system", """You are a helpful AI assistant with access to specific documents.
+    ("system", """You are a helpful AI assistant with access to specific goverment documents.
 
 IMPORTANT INSTRUCTIONS:
 - When context is provided below, use it to answer the question accurately and completely.
 - If the context contains the answer, provide it directly without mentioning that you found it in the context.
 - Do NOT say "the content is not included" if information is present in the context.
 - If you genuinely cannot find the answer in the provided context, then you may say so.
+
 
 CONTEXT FROM DOCUMENTS:
 {context}
