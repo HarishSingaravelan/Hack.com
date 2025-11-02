@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from src.LangChainWithChroma import chain_with_history, retriever
+from src.LangChainWithChromaAndWeb import chain_with_history, retriever
 
 # --- FastAPI Application Setup ---
 
