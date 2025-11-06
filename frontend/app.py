@@ -833,7 +833,7 @@ with st.sidebar:
     )
 
     if st.session_state.voice_input_active:
-        if not GEMINI_API_KEY:
+        if not GEMINI_API_KEY_FRONTEND:
             st.warning(t("gemini_key_needed"))
         else:
             st.success(t("gemini_ready"))
