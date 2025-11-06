@@ -75,7 +75,7 @@ CivicConnect/
 ├── motions/                     # Extracted ASL motion JSON files
 │   └── *.json
 │
-├── tryasl/                      # WLASL dataset JSON
+├── asl/                      # WLASL dataset JSON
 │   └── WLASL_v0.3.json
 │
 ├── scripts/                     # Utility scripts
