@@ -93,18 +93,118 @@ TRANSLATIONS = {
         "asl_video_ready": "✅ ASL video ready",
     },
     "Spanish": {
-        # ... (keeping all Spanish translations)
-        "asl_avatar": "👤 Salida de Video ASL",
-        "asl_help": "Interpretación en video de Lengua de Señas Americana",
-        "generating_asl": "🤟 Generando video ASL...",
-        "asl_video_ready": "✅ Video ASL listo",
+        "app_title": "CivicConnect",
+        "app_subtitle": "Asistente de Servicios Gubernamentales Impulsado por IA",
+        "app_powered": "🎤 Entrada de Voz Gemini + 🔊 Salida de Voz ElevenLabs",
+        "accessibility_settings": "🎛️ Configuración de Accesibilidad",
+        "voice_input": "🎤 Entrada de Voz (Gemini)",
+        "enable_voice_input": "Habilitar Entrada de Voz",
+        "voice_input_help": "Grabe preguntas usando micrófono + API Gemini",
+        "gemini_key_needed": "⚠️ Se necesita clave API de Gemini",
+        "gemini_ready": "✅ Gemini listo para entrada de voz",
+        "voice_output": "🔊 Salida de Voz (ElevenLabs)",
+        "enable_voice_output": "Habilitar Salida de Voz",
+        "voice_output_help": "Escuche respuestas con ElevenLabs TTS",
+        "select_voice": "Seleccionar Voz",
+        "elevenlabs_ready": "✅ ElevenLabs listo",
+        "elevenlabs_key_needed": "⚠️ Se necesita clave API de ElevenLabs",
+        "asl_avatar": "👤 Avatar ASL",
+        "asl_help": "Interpretación en Lengua de Señas Americana",
+        "language": "🌍 Idioma",
+        "select_language": "Seleccionar Idioma",
+        "session_info": "ℹ️ Información de Sesión",
+        "session_id": "ID",
+        "active_area": "Área",
+        "messages": "Mensajes",
+        "new_conversation": "🔄 Nueva Conversación",
+        "how_can_help": "📋 ¿Cómo puedo ayudarte hoy?",
+        "select_focus": "Selecciona un área de enfoque para comenzar:",
+        "taxes": "💰 **Impuestos**",
+        "taxes_desc": "*Formularios del IRS, pagos, deducciones*",
+        "housing": "🏠 **Ayuda de Vivienda**",
+        "housing_desc": "*Sección 8, PHA, asistencia de alquiler*",
+        "dmv": "🚗 **DMV/Licencia**",
+        "dmv_desc": "*REAL ID, titulación de vehículos, licencias*",
+        "grounded_message": "🛡️ Basado en documentos oficiales • 🎤 Entrada de voz Gemini • 🔊 Salida de voz natural ElevenLabs",
+        "welcome_taxes": "¡Bienvenido a la asistencia de **Impuestos**! ¿Cómo puedo ayudar?",
+        "welcome_housing": "¡Bienvenido a la asistencia de **Ayuda de Vivienda**! ¿Cómo puedo ayudar?",
+        "welcome_dmv": "¡Bienvenido a la asistencia de **DMV/Licencia**! ¿Cómo puedo ayudar?",
+        "voice_input_section": "🎤 Entrada de Voz (impulsado por Gemini)",
+        "click_to_record": "🎙️ Haz clic en el micrófono para grabar tu pregunta",
+        "clear": "🗑️ Borrar",
+        "transcribing": "🎧 Transcribiendo con Gemini...",
+        "transcribed": "📝 Transcrito",
+        "transcription": "Transcripción",
+        "use_transcription": "✅ Usar esta transcripción",
+        "generating_response": "🤔 Generando respuesta...",
+        "voice_ready": "🔊 ¡Voz de ElevenLabs lista!",
+        "text_input": "💬 Entrada de Texto",
+        "type_question": "Escribe tu pregunta:",
+        "ask_about": "Preguntar sobre",
+        "send": "📤 Enviar",
+        "clear_chat": "🗑️ Borrar",
+        "chat_cleared": "Chat borrado. ¿Cómo puedo ayudar con",
+        "verified_sources": "🛡️ Verificado por",
+        "sources": "Fuentes",
+        "view_sources": "📚 Ver Fuentes",
+        "footer": "🏛️ CivicConnect | 🎤 Impulsado por API Gemini | 🔊 Impulsado por ElevenLabs | Construido para servicios gubernamentales accesibles",
     },
     "French": {
-        # ... (keeping all French translations)
-        "asl_avatar": "👤 Sortie Vidéo ASL",
-        "asl_help": "Interprétation vidéo en Langue des Signes Américaine",
-        "generating_asl": "🤟 Génération de vidéo ASL...",
-        "asl_video_ready": "✅ Vidéo ASL prête",
+        "app_title": "CivicConnect",
+        "app_subtitle": "Assistant des Services Gouvernementaux Alimenté par l'IA",
+        "app_powered": "🎤 Saisie Vocale Gemini + 🔊 Sortie Vocale ElevenLabs",
+        "accessibility_settings": "🎛️ Paramètres d'Accessibilité",
+        "voice_input": "🎤 Saisie Vocale (Gemini)",
+        "enable_voice_input": "Activer la Saisie Vocale",
+        "voice_input_help": "Enregistrez des questions avec le microphone + API Gemini",
+        "gemini_key_needed": "⚠️ Clé API Gemini nécessaire",
+        "gemini_ready": "✅ Gemini prêt pour la saisie vocale",
+        "voice_output": "🔊 Sortie Vocale (ElevenLabs)",
+        "enable_voice_output": "Activer la Sortie Vocale",
+        "voice_output_help": "Écoutez les réponses avec ElevenLabs TTS",
+        "select_voice": "Sélectionner la Voix",
+        "elevenlabs_ready": "✅ ElevenLabs prêt",
+        "elevenlabs_key_needed": "⚠️ Clé API ElevenLabs nécessaire",
+        "asl_avatar": "👤 Avatar ASL",
+        "asl_help": "Interprétation en Langue des Signes Américaine",
+        "language": "🌍 Langue",
+        "select_language": "Sélectionner la Langue",
+        "session_info": "ℹ️ Informations de Session",
+        "session_id": "ID",
+        "active_area": "Zone",
+        "messages": "Messages",
+        "new_conversation": "🔄 Nouvelle Conversation",
+        "how_can_help": "📋 Comment puis-je vous aider aujourd'hui?",
+        "select_focus": "Sélectionnez un domaine pour commencer:",
+        "taxes": "💰 **Impôts**",
+        "taxes_desc": "*Formulaires IRS, paiements, déductions*",
+        "housing": "🏠 **Aide au Logement**",
+        "housing_desc": "*Section 8, PHA, aide au loyer*",
+        "dmv": "🚗 **DMV/Permis**",
+        "dmv_desc": "*REAL ID, immatriculation, permis*",
+        "grounded_message": "🛡️ Basé sur des documents officiels • 🎤 Saisie vocale Gemini • 🔊 Sortie vocale naturelle ElevenLabs",
+        "welcome_taxes": "Bienvenue à l'assistance **Impôts**! Comment puis-je vous aider?",
+        "welcome_housing": "Bienvenue à l'assistance **Aide au Logement**! Comment puis-je vous aider?",
+        "welcome_dmv": "Bienvenue à l'assistance **DMV/Permis**! Comment puis-je vous aider?",
+        "voice_input_section": "🎤 Saisie Vocale (alimenté par Gemini)",
+        "click_to_record": "🎙️ Cliquez sur le microphone pour enregistrer votre question",
+        "clear": "🗑️ Effacer",
+        "transcribing": "🎧 Transcription avec Gemini...",
+        "transcribed": "📝 Transcrit",
+        "transcription": "Transcription",
+        "use_transcription": "✅ Utiliser cette transcription",
+        "generating_response": "🤔 Génération de la réponse...",
+        "voice_ready": "🔊 Voix ElevenLabs prête!",
+        "text_input": "💬 Saisie de Texte",
+        "type_question": "Tapez votre question:",
+        "ask_about": "Poser une question sur",
+        "send": "📤 Envoyer",
+        "clear_chat": "🗑️ Effacer",
+        "chat_cleared": "Chat effacé. Comment puis-je vous aider avec",
+        "verified_sources": "🛡️ Vérifié par",
+        "sources": "Sources",
+        "view_sources": "📚 Voir les Sources",
+        "footer": "🏛️ CivicConnect | 🎤 Alimenté par l'API Gemini | 🔊 Alimenté par ElevenLabs | Conçu pour des services gouvernamentaux accessibles",
     },
 }
 
@@ -132,50 +232,24 @@ if GEMINI_API_KEY_FRONTEND:
         st.sidebar.warning(f"Gemini initialization failed: {e}")
 
 
-# Custom CSS (add to existing st.markdown CSS section)
-# st.markdown(
-#     """
-# <style>
-#     .main-header {
-#         text-align: center;
-#         padding: 2rem 0;
-#         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-#         color: white;
-#         border-radius: 10px;
-#         margin-bottom: 2rem;
-#     }
-#     .voice-input-section {
-#         background: #f0f9ff;
-#         padding: 1rem;
-#         border-radius: 8px;
-#         border: 2px solid #3b82f6;
-#         margin-bottom: 1rem;
-#     }
-#     /* NEW: ASL Video Container */
-#     .asl-video-container {
-#         display: flex;
-#         justify-content: center;
-#         margin: 15px 0;
-#     }
-#     .asl-video-container video {
-#         width: 140px !important;
-#         height: 140px !important;
-#         max-width: 140px !important;
-#         max-height: 140px !important;
-#         border-radius: 12px;
-#         box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
-#         border: 2px solid #667eea;
-#         object-fit: contain;
-#         background: #f0f9ff;
-#     }
-# </style>
-# """,
-#     unsafe_allow_html=True,
-# )
-
 st.markdown(
     """
 <style>
+    .main-header {
+        text-align: center;
+        padding: 2rem 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+    }
+    .voice-input-section {
+        background: #f0f9ff;
+        padding: 1rem;
+        border-radius: 8px;
+        border: 2px solid #3b82f6;
+        margin-bottom: 1rem;
+    }
     .asl-video-container {
         display: flex;
         justify-content: center;
@@ -515,26 +589,60 @@ def generate_asl_video(gloss_sequence, caption=None, is_fallback=False):
         return None
 
 
-# ========== EXISTING FUNCTIONS ==========
 def transcribe_audio_with_gemini(audio_bytes):
     """Transcribe audio using Gemini API with speech recognition"""
+    audio_file = None
+    temp_audio_path = None
+
     try:
         if not GEMINI_API_KEY_FRONTEND:
             st.error("⚠️ Gemini API key not configured")
             return None
 
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".mp4") as temp_audio:
+        # Save audio to temporary file
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".wav") as temp_audio:
             temp_audio.write(audio_bytes)
             temp_audio_path = temp_audio.name
 
+        # Upload file to Gemini
         audio_file = genai.upload_file(path=temp_audio_path)
+
+        # ⭐ CRITICAL FIX: Wait for file to be ACTIVE
+        import time
+
+        max_wait = 10  # Maximum 10 seconds wait
+        wait_time = 0
+
+        while audio_file.state.name == "PROCESSING" and wait_time < max_wait:
+            time.sleep(0.5)
+            wait_time += 0.5
+            audio_file = genai.get_file(audio_file.name)
+
+        # Check if file is ready
+        if audio_file.state.name != "ACTIVE":
+            st.error(f"⚠️ File upload failed. State: {audio_file.state.name}")
+            # Cleanup and return
+            if temp_audio_path and os.path.exists(temp_audio_path):
+                os.unlink(temp_audio_path)
+            return None
+
+        # File is ready - proceed with transcription
         model = genai.GenerativeModel("gemini-2.5-flash")
         language_name = st.session_state.language
         prompt = f"Transcribe this audio exactly as spoken in {language_name}. Only return the transcribed text, nothing else."
         response = model.generate_content([prompt, audio_file])
 
-        os.unlink(temp_audio_path)
-        genai.delete_file(audio_file.name)
+        # Clean up local temp file
+        if temp_audio_path and os.path.exists(temp_audio_path):
+            os.unlink(temp_audio_path)
+
+        # Clean up Gemini file
+        if audio_file:
+            try:
+                genai.delete_file(audio_file.name)
+            except Exception as delete_error:
+                # Don't fail if deletion fails - file will auto-expire
+                pass
 
         if response.text:
             return response.text.strip()
@@ -544,11 +652,20 @@ def transcribe_audio_with_gemini(audio_bytes):
 
     except Exception as e:
         st.error(f"Gemini transcription error: {e}")
-        if "temp_audio_path" in locals():
+
+        # Cleanup on error
+        if temp_audio_path and os.path.exists(temp_audio_path):
             try:
                 os.unlink(temp_audio_path)
             except:
                 pass
+
+        if audio_file:
+            try:
+                genai.delete_file(audio_file.name)
+            except:
+                pass
+
         return None
 
 
@@ -916,13 +1033,6 @@ else:
                                     f"**{i}. [{source['title']}]({source['uri']})**"
                                 )
 
-                    # Display ASL video if available
-                    # if message.get("asl_video") and st.session_state.asl_active:
-                    #     st.success(f"🤟 {t('asl_video_ready')}")
-                    #     st.video(message["asl_video"])
-                    #     if message.get("asl_gloss"):
-                    #         with st.expander("📝 ASL Gloss"):
-                    #             st.code(" → ".join(message["asl_gloss"]))
                     if message.get("asl_video") and st.session_state.asl_active:
                         st.success(f"🤟 {t('asl_video_ready')}")
 
