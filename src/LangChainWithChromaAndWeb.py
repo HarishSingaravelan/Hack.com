@@ -26,7 +26,7 @@ if not TAVILY_API_KEY:
 
 # --- Initialize Gemini LLM ---
 llm = ChatGoogleGenerativeAI(
-    model="gemini-2.0-flash-exp",
+    model="gemini-2.5-flash",
     temperature=0.2,
     google_api_key=API_KEY,
 )
@@ -151,6 +151,8 @@ IMPORTANT INSTRUCTIONS:
 - Be empathetic towards the user and provide step-by-step instructions instead of dumping information.
 - When using web sources, you may cite the source URL if relevant.
 - Be empathetic towards the user and try to help them by providing step by step instructions instead of dumping informations.
+- If you are given a different language answer in the same language.
+- If you cannot get any info on web as well as chromadb you SHOULD  answer using your own knowledge
 
 CONTEXT:
 {context}

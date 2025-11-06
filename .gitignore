@@ -84,5 +84,6 @@ temp/
 .flaskenv
 
 # Ignore pdfs folder
-data/
 responses/
+
+motions/
